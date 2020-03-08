@@ -51,15 +51,15 @@ public class BoardFragment extends Fragment {
         switch (pos) {
             case 0:
                 textTitle.setText("Привет");
-                imageView.setImageResource(R.drawable.image1);
+                imageView.setImageResource(R.drawable.board1);
                 break;
             case 1:
                 textTitle.setText("Как дела");
-                imageView.setImageResource(R.drawable.image2);
+                imageView.setImageResource(R.drawable.board2);
                 break;
             case 2:
                 textTitle.setText("Отлично");
-                imageView.setImageResource(R.drawable.image3);
+                imageView.setImageResource(R.drawable.board3);
                 btnGetStarted = view.findViewById(R.id.btn_get_started);
                 btnGetStarted.setOnClickListener(new View.OnClickListener() {
                     @Override

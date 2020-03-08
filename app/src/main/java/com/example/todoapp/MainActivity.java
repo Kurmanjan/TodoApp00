@@ -25,6 +25,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -61,6 +62,11 @@ public class MainActivity extends AppCompatActivity {
             finish();
             return;
         }
+       /* if (FirebaseAuth.getInstance().getCurrentUser()==null) {
+            startActivity(new Intent(this, PhoneActivity.class));
+            finish();
+            return;
+        }*/
 
         setContentView(R.layout.activity_main);
 
@@ -94,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
     private void initFile() {
         String permission = Manifest.permission.WRITE_EXTERNAL_STORAGE;
         if (EasyPermissions.hasPermissions(this, permission)) {
-            File folder = new File(Environment.getExternalStorageDirectory(), "TodoApp");
+            File folder = new File(Environment.getExternalStorageDirectory(), "TodoApp3");
             folder.mkdirs();
             File file = new File(folder, "note.txt");
             try {
@@ -120,6 +126,8 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

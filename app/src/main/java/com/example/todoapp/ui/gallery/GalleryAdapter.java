@@ -13,18 +13,21 @@ import java.util.ArrayList;
 
 
 public class GalleryAdapter extends RecyclerView.Adapter<GalleryViewHolder> {
-    ArrayList<String> names;
+    ArrayList<String> list;
 
     public GalleryAdapter() {
-        names = new ArrayList<>();
-        names.add("Nurzhamal");
-        names.add("Aygerim");
-        names.add("Kunduz");
-        names.add("Ayima");
-        names.add("Pavel");
-        names.add("Kubat");
-        names.add("Syimyk");
-        names.add("Nursultan");
+        list = new ArrayList<>();
+        list.add("Nurzhamal");
+        list.add("Aygerim");
+        list.add("Kunduz");
+        list.add("Ayima");
+        list.add("Pavel");
+        list.add("Kubat");
+        list.add("Syimyk");
+        list.add("Nursultan");
+        list.add("Kurmanjan");
+        list.add("Bakyt");
+        list.add("Perizat");
     }
 
     @NonNull
@@ -38,12 +41,12 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull GalleryViewHolder holder, int position) {
-        holder.setTextViewGallery(names.get(position));
+        holder.setTextViewGallery(list.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return names.size();
+        return list.size();
     }
 
 }

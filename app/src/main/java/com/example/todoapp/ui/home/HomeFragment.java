@@ -91,18 +91,18 @@ public class HomeFragment extends Fragment implements WorkAdapter.OnNoteListener
         AlertDialog.Builder alert = new AlertDialog.Builder(getContext());
         alert.setTitle("Android");
         alert.setMessage("Вы действительно хотите удалить?");
-        alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        alert.setPositiveButton("Да", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 App.getDatabase().workDao().delete(list.get(position));
                 adapter.notifyDataSetChanged();
-                Toast.makeText(getContext(), "Good", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Хорошо", Toast.LENGTH_SHORT).show();
             }
         });
-        alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
+        alert.setNegativeButton("Нет", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(getContext(), "Bad", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Плохо", Toast.LENGTH_SHORT).show();
             }
         });
         alert.show();
